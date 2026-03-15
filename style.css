@@ -1,30 +1,78 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body{
-font-family: Arial;
-background: black;
+height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-height:100vh;
+background:linear-gradient(135deg,#667eea,#764ba2);
 }
 
 .container{
 background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
+padding:40px;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
 text-align:center;
+width:380px;
+animation:fadeIn 1s ease;
+}
+
+h1{
+margin-bottom:15px;
+color:#333;
+}
+
+p{
+color:#666;
+margin-bottom:15px;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:16px;
+margin-bottom:20px;
 }
 
 button{
-margin-top:10px;
-padding:10px 20px;
-background:purple;
-color:white;
+width:100%;
+padding:12px;
+background:#667eea;
 border:none;
-border-radius:5px;
+color:white;
+font-size:16px;
+border-radius:8px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-background:#0056b3;
+background:#5563c1;
+transform:scale(1.03);
+}
+
+#result{
+margin-top:20px;
+font-size:18px;
+font-weight:600;
+color:#333;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
